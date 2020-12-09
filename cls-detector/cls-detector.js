@@ -51,7 +51,7 @@ new PerformanceObserver((entryList) => {
             };
             console.debug(`[${level}] CLS detected! Current CLS =`, window.__cls);        
             for(e of entry.sources){            
-                if(articleSwipe && e.node === articleSwipe.swiper.wrapperEl){                
+                if(window.articleSwipe && e.node === window.articleSwipe.swiper.wrapperEl){                
                     console.debug('-----> SWIPER CLS :', entry.value);            
                 }        
             }    
